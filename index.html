@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Developer Assignment</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <script src="js/script.js"></script>
+
+    <!-- ========== TOP WRAPPER ========== -->
+    <div class="hero-bg-wrapper">
+      <header class="navbar">
+        <div class="container">
+          <div class="logo">GTG</div>
+
+          <nav class="nav-links" id="navLinks">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Shop &#9662;</a></li>
+              <li><a href="#">Fragrances</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="right-side">
+            <img
+              src="assets/search-icon.png"
+              alt="Search"
+              class="search-icon"
+            />
+            <button class="shop-now-btn">Shop Now</button>
+
+            <!-- Hamburger -->
+            <div class="hamburger" id="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- ========== HERO SECTION ========== -->
+      <section class="hero">
+        <div class="hero-container">
+          <div class="hero-left">
+            <div class="badge">
+              <span>🏆 Awarded the best perfume in the world</span>
+            </div>
+            <h1>Live your best life.</h1>
+            <div class="stats">
+              <div class="stat">
+                <strong>10x</strong>
+                <p>power</p>
+              </div>
+              <div class="stat">
+                <strong>9</strong>
+                <p>ingredients</p>
+              </div>
+              <div class="stat">
+                <strong>20K+</strong>
+                <p>happy customers</p>
+              </div>
+            </div>
+            <button class="shop-now-btn">Shop Now</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ========== PRODUCT SECTION ========== -->
+    <section class="product-section">
+      <div class="container product-wrapper">
+        <!-- LEFT: Image Gallery -->
+        <div class="product-gallery">
+          <div class="main-image">
+            <img
+              id="mainProductImage"
+              src="assets/mainPerfumeBottle.png"
+              alt="Product"
+            />
+            <div class="gallery-controls">
+              <button id="prevBtn">←</button>
+              <div class="dots" id="galleryDots">
+                <!-- JS will insert dots -->
+              </div>
+              <button id="nextBtn">→</button>
+            </div>
+          </div>
+          <div class="thumbnails">
+            <img src="assets/competitorImg1.png" alt="thumb1" />
+            <img src="assets/competitorImg2.png" alt="thumb2" />
+            <img src="assets/competitorImg3.png" alt="thumb3" />
+            <img src="assets/competitorImg4.png" alt="thumb4" />
+          </div>
+        </div>
+
+        <!-- RIGHT: Product Options -->
+        <div class="product-info">
+          <h2>GTG Perfumes</h2>
+          <p class="rating">⭐ 4.7 (999+ reviews)</p>
+          <p class="desc">
+            Experience the timeless allure backed by modern artistry...
+          </p>
+
+          <!-- Subscription Boxes -->
+          <div class="subscription-box">
+            <label>
+              <input type="radio" name="plan" value="single" checked />
+              <strong>Single Subscription</strong>
+              <span class="price">$99.99 <s>$146</s></span>
+            </label>
+
+            <!-- Fragrance Options -->
+            <div class="fragrance-options">
+              <p>Choose a Fragrance</p>
+
+              <label>
+                <input type="radio" name="fragrance" value="original" checked />
+                <img src="assets/smallPerfumeBollte3.png" alt="Original" />
+                Original
+              </label>
+
+              <label>
+                <input type="radio" name="fragrance" value="lily" />
+                <img src="assets/smallPerfumeBollte2.png" alt="Lily" />
+                Lily
+              </label>
+
+              <label>
+                <input type="radio" name="fragrance" value="rose" />
+                <img src="assets/smallPerfumeBollte1.png" alt="Rose" />
+                Rose
+              </label>
+            </div>
+
+            <!-- Purchase Options -->
+            <div class="purchase-options">
+              <p>What's Included:</p>
+
+              <label>
+                <input type="radio" name="purchase" value="monthly" checked />
+                <img src="assets/smallPerfumeBollte3.png" alt="Monthly" />
+                Every 30 Days
+              </label>
+
+              <label>
+                <input type="radio" name="purchase" value="onetime" />
+                <div style="display: flex">
+                <img src="assets/smallPerfumeBollte3.png" alt="One Time" />
+                <img src="assets/smallPerfumeBollte2.png" alt="One Time" />
+                <img src="assets/smallPerfumeBollte1.png" alt="One Time" />
+                </div>
+                One Time (Free)
+              </label>
+            </div>
+          </div>
+
+          <!-- Double Subscription -->
+          <div class="subscription-box">
+            <label>
+              <input type="radio" name="plan" value="double" />
+              <strong>Double Subscription</strong>
+              <span class="price">$169.99 <s>$146</s></span>
+            </label>
+          </div>
+
+          <a id="addToCartBtn" class="add-to-cart" href="#">Add to Cart</a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
