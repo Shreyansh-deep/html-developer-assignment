@@ -35,7 +35,8 @@ function updateImage() {
 }
 
 prevBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + productImages.length) % productImages.length;
+  currentIndex =
+    (currentIndex - 1 + productImages.length) % productImages.length;
   updateImage();
 });
 
@@ -47,23 +48,49 @@ nextBtn.addEventListener("click", () => {
 // Initial load
 updateImage();
 
-document.querySelectorAll('.accordion-header').forEach(header => {
-  header.addEventListener('click', () => {
+document.querySelectorAll(".accordion-header").forEach((header) => {
+  header.addEventListener("click", () => {
     const parent = header.parentElement;
-    const content = parent.querySelector('.accordion-content');
-    const icon = header.querySelector('.toggle-icon');
+    const content = parent.querySelector(".accordion-content");
+    const icon = header.querySelector(".toggle-icon");
 
     // Toggle this one only
-    parent.classList.toggle('active');
+    parent.classList.toggle("active");
 
-    if (parent.classList.contains('active')) {
-      content.style.display = 'block';
-      icon.textContent = '−';
+    if (parent.classList.contains("active")) {
+      content.style.display = "block";
+      icon.textContent = "−";
     } else {
-      content.style.display = 'none';
-      icon.textContent = '+';
+      content.style.display = "none";
+      icon.textContent = "+";
     }
   });
 });
 
+document.querySelectorAll('input[type="radio"]').forEach((radio) => {
+  radio.addEventListener("change", function () {
+    // Handle fragrance selection
+    if (this.name === "fragrance") {
+      document.querySelectorAll(".fragrance-option").forEach((option) => {
+        option.classList.remove("active");
+      });
+      this.closest(".fragrance-option").classList.add("active");
+    }
 
+    // Handle purchase option selection
+    if (this.name === "purchase") {
+      document.querySelectorAll(".inclusion-option").forEach((option) => {
+        option.classList.remove("active");
+      });
+      this.closest(".inclusion-option").classList.add("active");
+    }
+
+    // Handle subscription plan selection
+    if (this.name === "plan") {
+      document.querySelectorAll(".subscription-box").forEach((box) => {
+        box.classList.add("inactive");
+      });
+      this.closest(".subscription-box").classList.remove("inactive");
+    }
+  });
+});

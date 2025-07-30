@@ -101,10 +101,10 @@
         <!-- RIGHT: Product Info -->
         <div class="product-info">
           <h2>GTG Perfumes</h2>
-          <p class="rating">
+          <div class="rating">
             <span class="stars">★★★★★</span>
             <span class="review-text">4.7 (999+ reviews)</span>
-          </p>
+          </div>
           <p class="desc">
             Experience the timeless allure backed by modern artistry, captured
             in every bottle of our fragrance. Crafted for those who seek to
@@ -115,69 +115,211 @@
           <div class="most-popular">Most Popular</div>
 
           <!-- Single Subscription -->
-          <div class="subscription-box active">
-            <label>
-              <input type="radio" name="plan" value="single" checked />
-              <strong>Single Subscription</strong>
-              <span class="price">$99.99 <s>$146</s></span>
-            </label>
-
-            <div class="fragrance-options">
-              <p>Choose a Fragrance</p>
+          <div class="subscription-box">
+            <div class="subscription-header">
               <label
-                ><input type="radio" name="fragrance" checked />
-                <img src="assets/smallPerfumeBollte3.png" alt="Original" />
-                Original</label
+                style="display: flex; align-items: center; cursor: pointer"
               >
-              <label
-                ><input type="radio" name="fragrance" />
-                <img src="assets/smallPerfumeBollte2.png" alt="Lily" />
-                Lily</label
-              >
-              <label
-                ><input type="radio" name="fragrance" />
-                <img src="assets/smallPerfumeBollte1.png" alt="Rose" />
-                Rose</label
-              >
+                <input type="radio" name="plan" value="single" checked />
+                <span class="subscription-title">Single Subscription</span>
+              </label>
+              <div class="price-container">
+                <span class="current-price">$99.99</span>
+                <span class="original-price">$146</span>
+              </div>
             </div>
 
-            <div class="purchase-options">
-              <p>What's Included:</p>
-              <label
-                ><input type="radio" name="purchase" checked />
-                <img src="assets/smallPerfumeBollte3.png" alt="" /> Every 30
-                Days</label
-              >
-              <label>
-                <input type="radio" name="purchase" />
-                <div class="multi-img">
-                  <img src="assets/smallPerfumeBollte3.png" />
-                  <img src="assets/smallPerfumeBollte2.png" />
-                  <img src="assets/smallPerfumeBollte1.png" />
-                </div>
-                One Time <strong>(Free)</strong>
-              </label>
+            <div class="fragrance-section">
+              <div class="section-title">
+                Choose a Fragrance
+                <span class="best-value-tag">BEST VALUE</span>
+              </div>
+              <div class="fragrance-options">
+                <label class="fragrance-option active">
+                  <input type="radio" name="fragrance" checked />
+                  <img src="/assets/smallPerfumeBollte3.png" alt="Original" />
+                  <span>Original</span>
+                </label>
+                <label class="fragrance-option">
+                  <input type="radio" name="fragrance" />
+                  <img src="/assets/smallPerfumeBollte2.png" alt="Lily" />
+                  <span>Lily</span>
+                </label>
+                <label class="fragrance-option">
+                  <input type="radio" name="fragrance" />
+                  <img src="/assets/smallPerfumeBollte1.png" alt="Rose" />
+                  <span>Rose</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="whats-included">
+              <div class="section-title">What's Included:</div>
+              <div class="inclusion-options">
+                <label class="inclusion-option active">
+                  <input type="radio" name="purchase" checked />
+                  <div class="inclusion-single">
+                    <img src="/assets/smallPerfumeBollte3.png" alt="" />
+                  </div>
+                  <span class="inclusion-text">Every 30 Days</span>
+                </label>
+                <label class="inclusion-option">
+                  <input type="radio" name="purchase" />
+                  <div class="inclusion-multiple">
+                    <img src="/assets/smallPerfumeBollte3.png" />
+                    <img src="/assets/smallPerfumeBollte2.png" />
+                    <img src="/assets/smallPerfumeBollte1.png" />
+                  </div>
+                  <span class="inclusion-text"
+                    >One Time <span class="free-tag">(Free)</span></span
+                  >
+                </label>
+              </div>
             </div>
 
             <ul class="features-list">
-              <li>📦 1 Bottle Shipped Monthly</li>
               <li>
-                🎁 <strong>Free Sampler</strong> for Original, Lily and Rose
+                <div class="feature-icon box"></div>
+                1 Bottle Shipped Monthly
+              </li>
+              <li>
+                <div class="feature-icon gift"></div>
+                <strong>Free Sampler</strong> for Original, Lily and Rose
                 Fragrances
               </li>
-              <li>💸 <strong>50% OFF Shipping</strong></li>
-              <li>⏳ Pause or Cancel Anytime After 3 Months Minimum</li>
-              <li>🔁 28 Day Money Back Guarantee*</li>
+              <li>
+                <div class="feature-icon shipping"></div>
+                <strong>50% OFF Shipping</strong>
+              </li>
+              <li>
+                <div class="feature-icon pause"></div>
+                Pause or Cancel Anytime After 3 Months Minimum
+              </li>
+              <li>
+                <div class="feature-icon guarantee"></div>
+                28 Day Money Back Guarantee*
+              </li>
             </ul>
           </div>
 
           <!-- Double Subscription -->
-          <div class="subscription-box">
-            <label>
-              <input type="radio" name="plan" value="double" />
-              <strong>Double Subscription</strong>
-              <span class="price">$169.99 <s>$146</s></span>
-            </label>
+          <div class="subscription-box inactive">
+            <div class="subscription-header">
+              <label
+                style="display: flex; align-items: center; cursor: pointer"
+              >
+                <input type="radio" name="plan" value="double" />
+                <span class="subscription-title">Double Subscription</span>
+              </label>
+              <div class="price-container">
+                <span class="current-price">$169.99</span>
+                <span class="original-price">$146</span>
+              </div>
+            </div>
+
+            <div class="double-subscription-content" style="display: none">
+              <div class="fragrance-section">
+                <div class="section-title">
+                  Choose Fragrance 1
+                  <span class="best-value-tag">BEST VALUE</span>
+                </div>
+                <div class="fragrance-options">
+                  <label class="fragrance-option active">
+                    <input type="radio" name="fragrance1" checked />
+                    <img
+                      src="/assets//smallPerfumeBollte3.png"
+                      alt="Original"
+                    />
+                    <span>Original</span>
+                  </label>
+                  <label class="fragrance-option">
+                    <input type="radio" name="fragrance1" />
+                    <img src="/assets//smallPerfumeBollte2.png" alt="Lily" />
+                    <span>Lily</span>
+                  </label>
+                  <label class="fragrance-option">
+                    <input type="radio" name="fragrance1" />
+                    <img src="/assets//smallPerfumeBollte1.png" alt="Rose" />
+                    <span>Rose</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="fragrance-section">
+                <div class="section-title">
+                  Choose Fragrance 2
+                  <span class="best-value-tag">BEST VALUE</span>
+                </div>
+                <div class="fragrance-options">
+                  <label class="fragrance-option active">
+                    <input type="radio" name="fragrance2" checked />
+                    <img
+                      src="/assets//smallPerfumeBollte3.png"
+                      alt="Original"
+                    />
+                    <span>Original</span>
+                  </label>
+                  <label class="fragrance-option">
+                    <input type="radio" name="fragrance2" />
+                    <img src="/assets//smallPerfumeBollte2.png" alt="Lily" />
+                    <span>Lily</span>
+                  </label>
+                  <label class="fragrance-option">
+                    <input type="radio" name="fragrance2" />
+                    <img src="/assets//smallPerfumeBollte1.png" alt="Rose" />
+                    <span>Rose</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="whats-included">
+                <div class="section-title">What's Included:</div>
+                <div class="inclusion-options">
+                  <label class="inclusion-option active">
+                    <input type="radio" name="double-purchase" checked />
+                    <div class="inclusion-single">
+                      <img src="/assets//smallPerfumeBollte3.png" alt="" />
+                    </div>
+                    <span class="inclusion-text">Every 30 Days</span>
+                  </label>
+                  <label class="inclusion-option">
+                    <input type="radio" name="double-purchase" />
+                    <div class="inclusion-multiple">
+                      <img src="/assets//smallPerfumeBollte3.png" />
+                      <img src="/assets//smallPerfumeBollte2.png" />
+                      <img src="/assets//smallPerfumeBollte1.png" />
+                    </div>
+                    <span class="inclusion-text"
+                      >One Time <span class="free-tag">(Free)</span></span
+                    >
+                  </label>
+                </div>
+              </div>
+
+              <ul class="features-list">
+                <li>
+                  <div class="feature-icon box"></div>
+                  1 Bottle Shipped Monthly
+                </li>
+                <li>
+                  <div class="feature-icon gift"></div>
+                  <strong>Free Sampler</strong> for Original, Lily and Rose
+                  Fragrances
+                </li>
+                <li>
+                  <div class="feature-icon shipping"></div>
+                  <strong>50% OFF Shipping</strong>
+                </li>
+                <li>
+                  <div class="feature-icon pause"></div>
+                  Pause or Cancel Anytime After 3 Months Minimum
+                </li>
+                <li>
+                  <div class="feature-icon guarantee"></div>
+                  28 Day Money Back Guarantee*
+                </li>
+              </ul>
+            </div>
           </div>
 
           <a id="addToCartBtn" class="add-to-cart" href="#">Add to Cart</a>
